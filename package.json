@@ -1,0 +1,26 @@
+{
+  "name": "sample-elasticsearch-index-migrate",
+  "version": "0.0.0",
+  "description": "sample-elasticsearch-index-migrate",
+  "main": "index.js",
+  "scripts": {
+    "es6:plan": "elasticsearch-index-migrate plan -O ./sample/es6/migration/config/config.json",
+    "es6:migrate": "elasticsearch-index-migrate migrate -O ./sample/es6/migration/config/config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmiura-1002/sample-elasticsearch-index-migrate.git"
+  },
+  "keywords": [
+    "sample"
+  ],
+  "author": "kmiura-1002",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kmiura-1002/sample-elasticsearch-index-migrate/issues"
+  },
+  "homepage": "https://github.com/kmiura-1002/sample-elasticsearch-index-migrate#readme",
+  "devDependencies": {
+    "elasticsearch-index-migrate": "^0.3.7"
+  }
+}
