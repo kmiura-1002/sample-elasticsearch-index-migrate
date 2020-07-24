@@ -1,0 +1,11 @@
+{
+  "type": "ADD_FIELD",
+  "description": "add price filed",
+  "migrate_script": {
+    "properties" : {
+      "price": {
+        "type": "long"
+      }
+    }
+  }
+}

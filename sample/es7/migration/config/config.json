@@ -1,10 +1,10 @@
 {
   "elasticsearch": {
-    "version": "7",
-    "connect": { "host": "http://localhost:9202" }
+    "version": "7.7.0",
+    "connect": { "host": "http://elasticsearch7x:9200" }
   },
   "migration": {
-    "locations": ["./sample/es7/migration"],
+    "locations": ["./es7/migration"],
     "baselineVersion": "v1.0.0"
   }
 }

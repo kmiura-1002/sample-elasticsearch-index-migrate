@@ -1,0 +1,23 @@
+{
+  "type": "CREATE_INDEX",
+  "description": "movie index",
+  "migrate_script": {
+    "settings": {
+      "index": {
+        "refresh_interval": "1s",
+        "number_of_shards": 1,
+        "number_of_replicas": 0
+      }
+    },
+    "mappings": {
+      "properties" : {
+        "title": {
+          "type": "text"
+        },
+        "plot": {
+          "type": "text"
+        }
+      }
+    }
+  }
+}
