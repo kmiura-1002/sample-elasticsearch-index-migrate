@@ -47,8 +47,3 @@ while [[ $# -gt 0 ]]; do
     esac
   shift
 done
-
-
-
-echo docker compose up
-docker-compose up -d
