@@ -144,16 +144,17 @@ The contents of the migration file follow the following type.
 
 ```
 {
-  type: 'ADD_FIELD' | 'CREATE_INDEX';
+  type: 'ADD_FIELD' | 'CREATE_INDEX' | 'DELETE_INDEX' | 'ALTER_SETTING';
   description: string;
   migrate_script: any;
 }
 ```
 
-The content of migrate_script varies depending on the type.
-For CREATE_INDEX, the migrate_script can contain the contents of [the Request body of the Create index API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html#indices-create-api-request-body).  
-
-In the case of ADD_FIELD, the migrate_script can contain the contents of [the Request body of the Put mapping API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-mapping.html#put-mapping-api-request-body).  
+The content of migrate_script varies depending on the type.  
+For CREATE_INDEX, you can create an index. migrate_script can contain the contents of [the Request body of the Create index API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html#indices-create-api-request-body).  
+For ADD_FIELD, you can add an already existing index field. migrate_script can contain the contents of [the Request body of the Put mapping API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-mapping.html#put-mapping-api-request-body).  
+For DELETE_INDEX, you can remove the index; migrate_script is not required.  
+For ALTER_SETTING, you can manipulate the settings of an already existing index. migrate_script can contain the contents of the request body of [the Update index settings API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-update-settings.html#update-index-settings-api-request-body).
 
 
 # Creating an Implementation Plan

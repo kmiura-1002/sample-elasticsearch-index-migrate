@@ -17,7 +17,7 @@ services:
     depends_on:
       - elasticsearch7x
   elasticsearch-migrate:
-    image: kmiura1002/elasticsearch-index-migrate:0.4.1
+    image: kmiura1002/elasticsearch-index-migrate:0.4.2
     volumes:
       - "./sample:/sample"
     depends_on:
